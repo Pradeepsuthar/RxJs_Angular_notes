@@ -1,0 +1,38 @@
+<div class="container">
+    <h4>Retry, RetryWhen, Scan and Delay Operator</h4>
+
+    <div class="container py-3 px-0">
+        <button class="btn btn-primary" (click)="getData()">
+            <span class="spinner-border spinner-border-sm mr-2" role="status"  *ngIf="fatching">
+                <span class="sr-only">Fatch API...</span>
+            </span>{{fatching?'Fatching...':'Fatch API'}}
+        </button>
+    <p class="my-4">Status : <b [ngClass]="{'text-success' : status == 'Post fatched successfully','text-danger' : status == 'Post fatching error'}">{{status}}</b>
+        <span class="spinner-grow spinner-grow-sm ml-2 text-warning" role="status" *ngIf="status=='Fatching...'">
+            <span class="sr-only">Loading...</span>
+          </span>
+    </p>
+        <div class="container px-0">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Post ID</th>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Post Title</th>
+                    <th scope="col">Post Body</th>
+                  </tr>
+                </thead>
+                <tbody>
+                <ng-container *ngFor="let post of postData;">
+                    <tr>
+                        <th scope="row">{{post?.id}}</th>
+                        <td>{{post?.userId}}</td>
+                        <td>{{post?.title}}</td>
+                        <td>{{post?.body}}</td>
+                    </tr>
+                </ng-container>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

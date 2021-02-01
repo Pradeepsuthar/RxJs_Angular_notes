@@ -1,0 +1,88 @@
+.subscribe__btn{
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.subscribe__btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d
+}
+.subscribe__btn-secondary:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62
+}
+.subscribe__btn-secondary.focus,
+.subscribe__btn-secondary:focus {
+    outline: none;
+}
+.subscribe__btn-secondary.disabled,
+.subscribe__btn-secondary:disabled {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d
+}
+.subscribe__btn-secondary:not(:disabled):not(.disabled).active,
+.subscribe__btn-secondary:not(:disabled):not(.disabled):active,
+.show > .subscribe__btn-secondary.dropdown-toggle {
+    outline: none;
+}
+.subscribe__btn-secondary:not(:disabled):not(.disabled).active:focus,
+.subscribe__btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show > .subscribe__btn-secondary.dropdown-toggle:focus {
+    outline: none;
+}
+
+
+.subscribe__btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+.subscribe__btn-danger:hover {
+    color: #fff;
+    background-color: #c82333;
+    border-color: #bd2130
+}
+.subscribe__btn-danger.focus,
+.subscribe__btn-danger:focus {
+    outline: none;
+}
+.subscribe__btn-danger.disabled,
+.subscribe__btn-danger:disabled {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545
+}
+.subscribe__btn-danger:not(:disabled):not(.disabled).active,
+.subscribe__btn-danger:not(:disabled):not(.disabled):active,
+.show > .subscribe__btn-danger.dropdown-toggle {
+    outline: none;
+}
+.subscribe__btn-danger:not(:disabled):not(.disabled).active:focus,
+.subscribe__btn-danger:not(:disabled):not(.disabled):active:focus,
+.show > .subscribe__btn-danger.dropdown-toggle:focus {
+    outline: none;
+}
+
+.btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem
+}

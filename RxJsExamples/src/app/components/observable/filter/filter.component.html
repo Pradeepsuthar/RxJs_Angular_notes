@@ -1,0 +1,38 @@
+<div class="container">
+    <h4>Filter</h4>
+
+    <div class="container py-3 px-0">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Ex-1 filter by length</div>
+                    <div class="card-body">
+                        <ul *ngFor="let user of filter1;">
+                            <li>{{user.id}} - {{user.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Ex-2 filter by Gander</div>
+                    <div class="card-body">
+                        <ul *ngFor="let user of filter2;">
+                            <li>{{user.id}} - {{user.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Ex-3 filter by nth item</div>
+                    <div class="card-body">
+                        <ul *ngFor="let user of filter3;">
+                            <li>{{user.id}} - {{user.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

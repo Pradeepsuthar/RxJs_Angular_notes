@@ -1,0 +1,57 @@
+<div class="container">
+    <h4>Replay Subject Operator</h4><hr>
+
+    <div class="justify-content-center d-flex">
+        <div class="my-auto">
+            <input type="text" placeholder="Video Title" class="form-control" #video>
+        </div>
+        <div class="my-auto ml-2">
+            <button class="btn btn-primary" (click)="onAddVideo(video)">Add Video</button>
+        </div>
+    </div><hr>
+
+    <div class="container py-3 px-0">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header">Users 1</div>
+                    <div class="card-body" *ngIf="user1VideoList.length>1">
+                        <ul *ngFor="let item of user1VideoList;">
+                            <li>{{item}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header d-flex justify-content-between">
+                        <span class="my-auto">Users 2</span>
+                        <div class="my-auto ml-2">
+                            <button class="btn-sm border-0 rounded-0 subscribe__btn" [ngClass]="subscribed2?'subscribe__btn-secondary':'subscribe__btn-danger'" (click)="subscribedUser2()">{{subscribed2?'Subscribed':'Subscribe'}}</button>
+                        </div>
+                    </div>
+                    <div class="card-body" *ngIf="user2VideoList.length>1">
+                        <ul *ngFor="let item of user2VideoList;">
+                            <li>{{item}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header d-flex justify-content-between">
+                        <span class="my-auto">Users 3</span>
+                        <div class="my-auto ml-2">
+                            <button class="btn-sm border-0 rounded-0 subscribe__btn" [ngClass]="subscribed3?'subscribe__btn-secondary':'subscribe__btn-danger'" (click)="subscribedUser3()">{{subscribed3?'Subscribed':'Subscribe'}}</button>
+                        </div>
+                    </div>
+                    <div class="card-body" *ngIf="user3VideoList.length>1">
+                        <ul *ngFor="let item of user3VideoList;">
+                            <li>{{item}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

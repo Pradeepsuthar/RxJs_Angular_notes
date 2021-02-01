@@ -1,0 +1,48 @@
+<div class="jumbotron jumbotron-fluid my-0 bg-transparent">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <form #searchForm="ngForm">
+                    <input type="text" class="form-control" name="searchTerm" ngModel autocomplete="off"
+                        required placeholder="Search">
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <div class="my-auto">
+                <p><b>Search Results</b></p>
+            </div>
+            <div class="my-auto">
+                <p class="text-muted">{{searchResultsCount}} Found results</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="container">
+
+            <ng-container *ngIf="searchResultsCount;">
+
+                <ng-container *ngFor="let video of searchResults">
+                    <div class="row">
+                        <div class="col-12 col-md-4 p-0 mb-3">
+                            <img [src]="video.snippet.thumbnails.high.url" class="thumbnail" alt="...">
+                        </div>
+                        <div class="col-12 col-md-8 mb-3 px-0 px-md-3">
+                            <h5 class="my-0">{{video.snippet.title}}</h5>
+                            <p class="mt-0 pt-0"><span><a href="https://www.youtube.com/channel/{{video.channelId}}"
+                                        class="text-dark text-decoration-none">{{video.snippet.channelTitle}}</a></span> |
+                                <span>13M views</span> . <span>{{video.snippet.publishTime | date:'fullDate'}}</span></p>
+                            <p>{{video.snippet.description}}</p>
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+
+            <div *ngIf="!searchResultsCount;">
+                <h3>No Data Available</h3>
+            </div>
+
+        </div>
+    </div>
+</div>

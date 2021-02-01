@@ -1,0 +1,18 @@
+.deleteProd:hover{
+    color: red;
+    cursor: pointer;
+}
+tr{
+    cursor: pointer;
+}
+
+.ng-valid{
+    border-color: green;
+}
+.ng-invalid.ng-touched{
+    border-color: red;
+}
+.editUser:hover{
+    color: var(--primary);
+    cursor: pointer;
+}

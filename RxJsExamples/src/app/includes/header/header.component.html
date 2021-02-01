@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-md-5 border-bottom fixed-top">
+  <a class="navbar-brand" routerLink="/">RxJs Tutorials</a>
+  <span class="badge badge-primary" *ngIf="important">Important</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/promise">Promise</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/http-crud">Firebase CRUD</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/observable">Observable</a>
+      </li>
+      <li class="nav-item">
+        <button class="wp__touch_icon__btn mx-2" routerLink="/notifications" routerLinkActive="active"><span
+            class="material-icons">notifications</span></button>
+      </li>
+      <li class="nav-item">
+        <button class="wp__touch_icon__btn mx-2" routerLink="/search" routerLinkActive="active"><span
+            class="material-icons">search</span></button>
+      </li>
+    </ul>
+  </div>
+</nav>
